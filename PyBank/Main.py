@@ -35,8 +35,8 @@ def G_increase_profit_Month_check():
 def G_decrease_profit_Month_check():
     return Month_List[Change_Profit_Losses_List.index(min(Change_Profit_Losses_List)) +1]
 
-#csvpath = os.path.join('PyBank_Resources_budget_data.csv')
-csvpath = os.path.join("..","Resources","budget_data.csv")
+csvpath = os.path.join("Resources/budget_data.csv")
+#csvpath = os.path.join("..","Resources","budget_data.csv")
 
 
 with open(csvpath,"r") as csvfile:
@@ -92,7 +92,7 @@ G_Decrease_profit_Month = G_decrease_profit_Month_check()
 print(f"Greatest Increase in Profits: {G_increase_profit_Month} (${max(Change_Profit_Losses_List)}) ")
 print(f"Greatest Decrease in Profits: {G_Decrease_profit_Month} (${min(Change_Profit_Losses_List)}) ")
 # write to an out put file
-with open("Financial Analysis.txt", 'w', newline='') as output:
+with open("analysis/Financial Analysis.txt", 'w', newline='') as output:
 
     # Initialize csv.writer
     #csvwriter = csv.writer(csvfile, delimiter=',')

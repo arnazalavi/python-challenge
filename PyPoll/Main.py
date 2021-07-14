@@ -24,7 +24,9 @@ def candidates_list_check(candidate_name):
 def election_winner():
     return candidates_list[candidates_votes.index(max(candidates_votes))]
 
-csvpath = os.path.join("..","Resources","election_data.csv")
+#csvpath = os.path.join("..","Resources","election_data.csv")
+csvpath = os.path.join("Resources/election_data.csv")
+
 with open(csvpath,"r") as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
@@ -61,7 +63,7 @@ print(f"Election Winner : {Election_Winner}")
 print(f"-----------------")
 
 # Open the file using "write" mode. Specify the variable to hold the contents
-with open("Election_Result.txt", 'w', newline='') as output:
+with open("analysis/Election_Result.txt", 'w', newline='') as output:
 
     # Initialize csv.writer
     #csvwriter = csv.writer(csvfile, delimiter=',')
